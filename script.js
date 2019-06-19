@@ -28,7 +28,7 @@ function requestApi(method, url) {
                 let nameItem = item.name || item.title,
                     dateRelease = item.first_air_date || item.release_date;
                     
-                inner += `<div class="col-6 col-md-4 col-xl-3">${nameItem} <br> Дата релиза: ${dateRelease}</div>`
+                inner += `<div class="col-6 col-md-4 col-xl-3 mb-4">${nameItem} <br> Дата релиза: ${dateRelease}</div>`
             });
             movie.innerHTML = inner;
         }
