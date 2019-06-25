@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron bg-dark">
-            <h1 class="text-center text-danger">Find films</h1>
-            <form action="" id="searchForm">
-                <input type="text" class="form-control" id="searchText" placeholder="Find films">
+    <div class="header-page">
+        <div class="container">
+            <form class="form-inline" id="searchForm">
+                <h1 class="header-heading text-center text-success">Find films</h1>
+                <div class="form-group group-search mx-sm-3">
+                    <input type="text" class="form-control mr-2" id="searchText" placeholder="Find films">
+                    <button type="submit" class="btn btn-outline-success">Search</button>
+                </div>
             </form>
         </div>
     </div>
+   
     <div class="container">
         <div class="movies row text-center">
-
         </div>
     </div>
     <script src="script.js"></script>
