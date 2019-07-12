@@ -23,18 +23,18 @@ function requestApi(method, url) {
     const xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.send();
+    movie.innerHTML = '<div class="spinner"></div>';
 
     xhr.addEventListener('load', () => {
     if (xhr.status == 200 && xhr.readyState == 4) {
         const output = JSON.parse(xhr.responseText);
         let inner = '';
-
         // If not founds results
         if(output.results.length === 0){
             inner = `<h3 class="m-auto text-info"> Not found!</h3>`;
         }
         console.log(output);
-        output.results.forEach(item => {
+        output.results.forEach((item) => {
             if (item.overview == '' && item.poster_path == null) {
             }
 
@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', trands);
     xhr.send();
+    movie.innerHTML = '<div class="spinner"></div>';
 
     xhr.addEventListener('load', () => {
         if (xhr.status == 200 && xhr.readyState == 4) {
@@ -88,10 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 inner = `<h3 class="m-auto text-info"> Not found!</h3>`;
             }
 
-            output.results.forEach(item => {
-                if (item.overview == '' && item.poster_path == null) {
-                    
-                }
+            output.results.forEach( (item) => {
 
                 if(item.poster_path == null || item.poster_path == 'undefined') {
                     posterImg = "posterNotFound.png";
