@@ -53,7 +53,7 @@ function renderMovieCards({ results }) {
     <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-5 item-wrap" data-id="${id}">
       <div class="item">
         <img class="mb-3" 
-          src="${poster_path ? poster : "posterNotFound.png"}"
+          src="${poster_path ? poster : "./src/images/posterNotFound.png"}"
           alt="${title}"
         />
         <h5 class="title">${title}</h5>
